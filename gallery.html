@@ -1,0 +1,969 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASHZ Studio | Custom Phone Covers</title>
+  <meta name="description" content="Custom phone covers — choose from our gallery or upload your design. Order online easily." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            'soft': '0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+          },
+          backgroundImage: {
+            'hero': 'radial-gradient(60% 60% at 70% 10%, rgb(255 255 255 / 0.15) 0%, transparent 60%), linear-gradient(135deg, #0f172a 0%, #111827 35%, #1f2937 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+    /* Hide scrollbar but keep scrolling */
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="text-slate-100 bg-slate-950">
+<header class="sticky top-0 z-40 backdrop-blur bg-slate-900/60 border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="group inline-flex items-center gap-2">
+      <img src="ASHZ logo.png" alt="ASHZ Studio Logo" class="w-8 h-8 rounded-xl shadow-soft"/>
+      <span class="text-sm font-semibold tracking-wide text-white/90 group-hover:text-white">ASHZ Studio</span>
+    </a>
+    <nav class="hidden sm:flex items-center gap-6 text-sm text-white/70">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="gallery.html" class="hover:text-white">Gallery</a>
+      <a href="about.html" class="hover:text-white">About</a>
+      <a href="contact.html" class="hover:text-white">Contact</a>
+      <a id="order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+    </nav>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto px-4 py-20">
+  <h2 class="text-3xl font-bold mb-10 text-indigo-400">Gallery</h2>
+
+  <!-- Filter Buttons -->
+  <div class="relative flex items-center mb-10">
+    <!-- Left Arrow -->
+    <button id="scroll-left"
+      class="absolute left-0 z-10 px-3 py-2 bg-slate-900/80 text-white rounded-l-xl shadow-soft">
+      ‹
+    </button>
+
+    <!-- Scrollable Filter Buttons -->
+<!-- Scrollable Filter Buttons -->
+<div id="filter-container"
+     class="flex overflow-x-auto gap-3 px-10 scrollbar-hide scroll-smooth whitespace-nowrap">
+      <button class="filter-btn px-4 py-2 rounded-xl bg-indigo-500/80 hover:bg-indigo-500 text-white" data-category="all">All</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="aesthetic">Aesthetic</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="animals">Animals</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="anime">Anime</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="cars">Cars</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="cartoon">Cartoons</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="comic">Comics</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="cute">Cute</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="landscapes">Landscapes</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="motivation">Motivation</button>
+      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="silhouette">Silhouette & Overlay</button>
+      <!-- repeated ones stay as you wanted -->
+</div>
+
+    <!-- Right Arrow -->
+    <button id="scroll-right"
+      class="absolute right-0 z-10 px-3 py-2 bg-slate-900/80 text-white rounded-r-xl shadow-soft">
+      ›
+    </button>
+
+    <!-- Gradient Fade Effect -->
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-slate-950 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-slate-950 to-transparent"></div>
+  </div>
+
+  <!-- Gallery Items -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery">
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="silhouette">
+      <img src="gallery/silhouette and overlay/jack skellington.jpeg" alt="jack skellington" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Jack Skellington</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/cutasourous.jpeg" alt="Cutasaurous" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Cutasaurous</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/kitty group.png" alt="kitty group" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Kitty Group</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="comic">
+      <img src="gallery/comic/spiderman.jpeg" alt="spiderman" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Spiderman</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cartoon">
+      <img src="gallery/cartoon/stitch.jpg" alt="stitch" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Stitch</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/let me out.jpeg" alt="let me out" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Let Me Out</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/pika nap.jpeg" alt="pika nap" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Pika Nap</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/Doggy.jpeg" alt="puppy night sky" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Puppy Night Sky</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/blue as sky.jpeg" alt="blue as sky" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Blue As Sky</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/orange bunny.jpeg" alt="orange bunny" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Orange Bunnies</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/big sacrifices.jpeg" alt="big sacrifice" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Big Sacrifices</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/traveling.jpeg" alt="traveling" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Traveling</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cartoon">
+      <img src="gallery/cartoon/hello.jpeg" alt="hello" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Hello Baymax</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="landscapes">
+      <img src="gallery/landscapes/night mountains.jpeg" alt="night mountains" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Night Mountains</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/proud cat.jpeg" alt="proud cat" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Proud Cat</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="comic">
+      <img src="gallery/comic/gara comic.jpeg" alt="gara comic" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Gara Comic</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/Lion in the wild.jpeg" alt="lion in the wild" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Lion In The Wild</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/dream.jpeg" alt="dream" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Follow Your Dream</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/frog.jpeg" alt="frog" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Frog</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/boring panda.jpeg" alt="boring panda" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Panda Bored</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/focus.jpeg" alt="focus" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Focus</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/resting.jpeg" alt="resting" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Rest Like A Cat</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/cat in water.jpeg" alt="cat in water" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Cat In Water</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cars">
+      <img src="gallery/cars/bugatti.jpeg" alt="bugatti" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Bugatti</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/more focus.jpeg" alt="more focus" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">More Focus</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/killer duck.jpeg" alt="killer duck" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Killer Duck</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/cute.jpeg" alt="duck" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Duck</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/freedom.jpeg" alt="freedom" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Freedom</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/sharks.jpeg" alt="sharks" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Sharks</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/outside the box.jpeg" alt="outside the box" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Outside The Box</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/butterflies.jpeg" alt="butterflies" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Butterflies</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/whale.jpeg" alt="whales" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Whale</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/step by day.jpeg" alt="step by day" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Step By Step</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/do not disturb.jpeg" alt="do not disturb" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Do Not Disturb</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/city.jpeg" alt="city" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Anime City Sky View</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/sharks in luv.jpeg" alt="sharks in love" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Sharks In Love</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/freedom.jpeg" alt="freedom" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Space Alone</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="motivation">
+      <img src="gallery/motivation/work in silence.jpeg" alt="work in silence" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">1%</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/float.jpeg" alt="float" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Float</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/cat spiral night.jpeg" alt="cat spiral night" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Cat Spiral Night</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/itachi.jpeg" alt="itachi Uchiha" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Itachi Uchiha</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="comic">
+      <img src="gallery/comic/buildings.jpeg" alt="batman on buildings" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">batman on building</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/blue whale.jpeg" alt="blue whale" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Blue Whale</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/hello kitty glow.jpeg" alt="hello kitty" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Hello Kitty Glow</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/gara black.jpeg" alt="gara black" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Gara Shadow</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/hello kitty.jpeg" alt="hello kitty love" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Hello Kitty Wink</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="animals">
+      <img src="gallery/animals/black and white.jpeg" alt="black & white" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Black & White</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/fall.jpeg" alt="fall" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Fallen Leaves</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/Aki fox devil.jpeg" alt="aki fox devil" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Aki Fox Devil</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/kitty coffee.jpeg" alt="kitty coffee" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Kitty Coffee</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cars">
+      <img src="gallery/cars/dodge challenger.jpeg" alt="dodge challenger" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Dodge challenger</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/lovely.jpeg" alt="lovely" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Lovely</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/floral.jpeg" alt="floral" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Flowers & Butterflies</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/samurai.jpeg" alt="cherry blossom samurai" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Cherry Blossom Samurai</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/music panda.jpeg" alt="music panda" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Music Panda</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/good things are coming.jpeg" alt="good things" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Good Things</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/panda band.jpeg" alt="panda band" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Panda Band</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/gara noaruto.jpeg" alt="gara naruto" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Gara</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/grab a star.jpeg" alt="grab a star" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Grab A Star</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/Aki.jpeg" alt="aki fox gesture" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Aki Fox Gesture</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/panda.jpeg" alt="hello panda" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Hello Panda</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="silhouette">
+      <img src="gallery/silhouette and overlay/spiderman silhoute.jpeg" alt="spiderman silhoutte" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Spiderman Silhouette</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/peeping.jpeg" alt="peeping kitty" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Peeping Kitty</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/iefle tower.jpeg" alt="eiffel tower" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Eiffel Tower</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/kakashi.jpeg" alt="kakashi" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Kakashi</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/Gojo.jpeg" alt="satoru gojo" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Satoru Gojo</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/petting.jpeg" alt="petting" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Petting</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/lone warrior.jpeg" alt="lone warrior" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Lone Warrior</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/Goku.jpeg" alt="Goku" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Goku Stand Alone</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/ewns.jpeg" alt="ewns" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">EWNS</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cute">
+      <img src="gallery/cute/starry night.jpeg" alt="starry night" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Starry Night</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="landscapes">
+      <img src="gallery/landscapes/mountains.jpeg" alt="Alone in mountains" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Alone In Mountains</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/itachi uchiha.jpeg" alt="itachi uchiha" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Itachi Ninja Crouch</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/loveley lady.jpeg" alt="lovely lady" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Lovely Lady</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/money.jpeg" alt="money" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Money</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/luffy.jpeg" alt="Straw Hat Luffy" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Straw Hat Luffy</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/sakamoto.jpeg" alt="sakomoto days" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Sakamoto Days</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/mr crabs.jpeg" alt="rose" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Mr. Crabs</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/satoru cat.jpeg" alt="satoru cat" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Satoru Cat</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/rose.jpeg" alt="rose" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Rose</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/saturo gojo.jpeg" alt="satoru b&w" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Satoru B&W</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/skeleton.jpeg" alt="skeleton" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Skeleton</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="anime">
+      <img src="gallery/anime/sipping.jpeg" alt="sipping" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Sipping In The morning</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="aesthetic">
+      <img src="gallery/aesthetic/spring evening.jpeg" alt="spring evening" class="w-full object-cover h-[600px]"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Spring Evening</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-10 border-t border-white/10 bg-slate-950">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60 text-sm">
+    <p>© <span id="year"></span> ASHZ Studio. All rights reserved.</p>
+    <p class="text-white/70">Designed & developed by ASHZ Studio</p>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Gallery filter
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
+
+      // Update button active styles
+      filterButtons.forEach(b => b.classList.remove('bg-indigo-500/80', 'hover:bg-indigo-500'));
+      filterButtons.forEach(b => b.classList.add('bg-slate-800', 'hover:bg-slate-700'));
+      btn.classList.remove('bg-slate-800', 'hover:bg-slate-700');
+      btn.classList.add('bg-indigo-500/80', 'hover:bg-indigo-500');
+
+      // Filter items
+      galleryItems.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+// Horizontal filter scroll - fixed
+const filterContainer = document.getElementById('filter-container'); // correct id
+document.getElementById('scroll-left').addEventListener('click', () => {
+  filterContainer.scrollBy({ left: -500, behavior: 'smooth' });
+});
+document.getElementById('scroll-right').addEventListener('click', () => {
+  filterContainer.scrollBy({ left: 500, behavior: 'smooth' });
+});
+
+</script>
+<script type="module">
+  import WHATSAPP_NUMBER from './config.js';
+
+  function openWhatsAppWithMessage(message) {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+
+  // Nav Order link → own design flow
+  const navOrder = document.getElementById('order-link');
+  if (navOrder) {
+    navOrder.addEventListener('click', (e) => {
+      e.preventDefault();
+      openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.');
+    });
+  }
+
+  // Gallery item buttons → use image alt/title/filename
+  document.querySelectorAll('#gallery .gallery-item').forEach(item => {
+    const btn = item.querySelector('a');
+    const img = item.querySelector('img');
+    if (!btn || !img) return;
+
+    const title = img.getAttribute('alt') || img.getAttribute('title') || '';
+    const src = img.getAttribute('src') || '';
+    const file = src.split('/').pop() || '';
+    const base = file.replace(/\.[^/.]+$/, '');
+    const imageName = title || base || 'this design';
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openWhatsAppWithMessage(`Hello, I would like to order this design: ${imageName}`);
+    });
+  });
+
+  // Bottom CTA → own design flow
+  const ownDesign = document.getElementById('order-own-design');
+  if (ownDesign) {
+    ownDesign.addEventListener('click', (e) => {
+      e.preventDefault();
+      openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.');
+    });
+  }
+</script>
+
+<!-- Paste this just before </body> -->
+<script>
+(function () {
+  // avoid duplicate insertion
+  if (document.getElementById('ashz-scroll-top-btn')) return;
+
+  // Create button
+  const btn = document.createElement('button');
+  btn.id = 'ashz-scroll-top-btn';
+  btn.type = 'button';
+  btn.title = 'Scroll to top';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.innerHTML = '↑';
+
+  // Inline styles (keeps it self-contained & safe)
+  btn.style.cssText = [
+    'position:fixed',
+    'right:1rem',
+    'bottom:1.5rem',
+    'padding:0.6rem 0.75rem',
+    'border-radius:9999px',
+    'background:#6366f1',        // indigo-ish
+    'color:#fff',
+    'border:none',
+    'box-shadow:0 10px 25px rgba(2,6,23,0.4)',
+    'cursor:pointer',
+    'z-index:9999',
+    'opacity:0',
+    'transform:translateY(8px)',
+    'transition:opacity .22s ease, transform .22s ease',
+    'display:none',
+    'font-weight:600',
+    'font-size:18px',
+    'line-height:1',
+    'min-width:44px',
+    'min-height:44px',
+    'text-align:center',
+    'user-select:none'
+  ].join(';');
+
+  // Accessible focus ring (injected CSS)
+  const style = document.createElement('style');
+  style.textContent = `
+    #ashz-scroll-top-btn:focus { outline: 3px solid rgba(99,102,241,0.25); outline-offset: 4px; }
+    #ashz-scroll-top-btn:hover { transform: translateY(0) scale(1.03); }
+  `;
+  document.head.appendChild(style);
+
+  document.body.appendChild(btn);
+
+  // show/hide logic
+  let visible = false;
+  function showBtn() {
+    if (visible) return;
+    visible = true;
+    btn.style.display = 'block';
+    // allow next frame for transition
+    requestAnimationFrame(() => {
+      btn.style.opacity = '1';
+      btn.style.transform = 'translateY(0)';
+    });
+  }
+  function hideBtn() {
+    if (!visible) return;
+    visible = false;
+    btn.style.opacity = '0';
+    btn.style.transform = 'translateY(8px)';
+    // remove from flow after transition to avoid tabbing to invisible element
+    setTimeout(() => {
+      if (!visible) btn.style.display = 'none';
+    }, 240);
+  }
+
+  // show after small scroll (tweak threshold if you want)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) showBtn(); else hideBtn();
+  }, { passive: true });
+
+  // Accelerating (ease-in) scroll-to-top using requestAnimationFrame
+  btn.addEventListener('click', () => {
+    const startY = window.scrollY;
+    if (startY <= 0) return;
+
+    // duration scales with distance but capped (so far pages scroll fast)
+    const minDur = 450;
+    const maxDur = 1200;
+    const duration = Math.max(minDur, Math.min(maxDur, startY * 0.5)); // roughly 0.5ms per px
+
+    const startTime = performance.now();
+
+    // quadratic ease-in: eased = t * t  (slow start, accelerates)
+    function step(now) {
+      const t = Math.min(1, (now - startTime) / duration);
+      const exponent = 1.1; // change this number (1.1 = faster start, 2 = slower start)
+      const eased = Math.pow(t, exponent);
+      const currentY = Math.round(startY * (1 - eased));
+      window.scrollTo(0, currentY);
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+
+  // optional: allow Escape to hide if focused accidentally
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') btn.blur();
+  });
+})();
+</script>
+
+</body>
+</html>

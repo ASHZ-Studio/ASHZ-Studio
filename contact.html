@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASHZ Studio | Contact</title>
+  <meta name="description" content="Get in touch with ASHZ Studio — email, phone, and social links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            'soft': '0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+          },
+          backgroundImage: {
+            'hero': 'radial-gradient(60% 60% at 70% 10%, rgb(255 255 255 / 0.15) 0%, transparent 60%), linear-gradient(135deg, #0f172a 0%, #111827 35%, #1f2937 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-100 bg-slate-950">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/60 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="group inline-flex items-center gap-2">
+        <img src="ASHZ logo.png" alt="ASHZ Studio Logo" class="w-8 h-8 rounded-xl shadow-soft"/>
+        <span class="text-sm font-semibold tracking-wide text-white/90 group-hover:text-white">ASHZ Studio</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-white/70">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="gallery.html" class="hover:text-white">Gallery</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+        <!-- <a id="order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-grow flex items-center justify-center px-4 py-20 relative">
+    <!-- Background glow -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/5 to-transparent blur-3xl"></div>
+
+    <!-- Contact Card -->
+    <div class="max-w-3xl w-full bg-slate-900/70 rounded-2xl shadow-soft border border-white/10 p-10">
+      <h2 class="text-3xl font-extrabold text-center bg-gradient-to-r from-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">Get in Touch</h2>
+      <p class="text-center text-white/70 mt-2">We’d love to hear from you! Reach out via email, phone, or social media.</p>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-2">
+        <!-- Email -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400">
+            📧
+          </div>
+          <div>
+            <p class="text-sm text-white/60">Email</p>
+            <a href="mailto:hunainghayas.0208@gmail.com" class="text-fuchsia-400 hover:underline font-medium">hunainghayas.0208@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400">
+            📞
+          </div>
+          <div>
+            <p class="text-sm text-white/60">Phone</p>
+            <a href="tel:+923272158230" class="text-fuchsia-400 hover:underline font-medium">+92 327 2158230</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="mt-10 flex justify-center gap-6 text-lg">
+        <a href="#" class="hover:text-fuchsia-400">🌐 Facebook</a>
+        <a href="#" class="hover:text-fuchsia-400">📸 Instagram</a>
+        <a href="#" class="hover:text-fuchsia-400">💼 LinkedIn</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60 text-sm">
+      <p>© <span id="year"></span> ASHZ Studio. All rights reserved.</p>
+      <p class="text-white/70">Designed & developed by ASHZ Studio</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module">
+    import WHATSAPP_NUMBER from './config.js';
+    function openWhatsAppWithMessage(message) {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+    const navOrder = document.getElementById('order-link');
+    if (navOrder) navOrder.addEventListener('click', (e) => { e.preventDefault(); openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.'); });
+  </script>
+</body>
+</html>

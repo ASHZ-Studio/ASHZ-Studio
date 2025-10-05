@@ -1,0 +1,12 @@
+{
+  "name": "ashz_studio_indigo",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13"
+  }
+}
