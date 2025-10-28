@@ -56,7 +56,7 @@
         <a href="gallery.html" class="hover:text-white">Gallery</a>
         <a href="about.html" class="hover:text-white">About</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
-        <a id="order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+        <!-- ORDER BUTTON REMOVED FROM HEADER -->
       </nav>
       <div id="drawer-overlay" class="xl:hidden"></div>
       <aside id="mobile-drawer" class="xl:hidden" tabindex="-1" aria-label="Mobile menu">
@@ -66,7 +66,7 @@
           <a href="gallery.html">Gallery</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
-          <a id="drawer-order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+          <!-- ORDER BUTTON REMOVED FROM MOBILE DRAWER -->
         </nav>
       </aside>
     </div>
@@ -79,7 +79,7 @@
     Our journey began with a simple idea: to blend art and technology to create something truly unique for every individual.
     We're a team driven by creativity, with a passion for designing covers that don't just protect your phone, but also express your personality and style.
     Every piece is a testament to our dedication to quality and our passion for what we do.
-    By choosing us, you’re not just getting a phone cover; you're supporting a dream and joining a community of creators who believe in the power of expression.
+    By choosing us, you're not just getting a phone cover; you're supporting a dream and joining a community of creators who believe in the power of expression.
   </p>
 </section>
 
@@ -99,8 +99,6 @@
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
-  const navOrder = document.getElementById('order-link');
-  if (navOrder) navOrder.addEventListener('click', (e) => { e.preventDefault(); openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.'); });
   (function(){
     if (window.__ashzNavInit) return; window.__ashzNavInit = true;
     const navToggle = document.getElementById('nav-toggle');

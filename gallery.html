@@ -189,7 +189,7 @@
         <a href="gallery.html" class="hover:text-white">Gallery</a>
         <a href="about.html" class="hover:text-white">About</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
-        <a id="order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+        <!-- ORDER BUTTON REMOVED FROM HEADER -->
       </nav>
       <div id="drawer-overlay" class="xl:hidden"></div>
       <aside id="mobile-drawer" class="xl:hidden" tabindex="-1" aria-label="Mobile menu">
@@ -199,14 +199,20 @@
           <a href="gallery.html">Gallery</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
-          <a id="drawer-order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+          <!-- ORDER BUTTON REMOVED FROM MOBILE DRAWER -->
         </nav>
       </aside>
     </div>
   </header>
 
 <section class="max-w-6xl mx-auto px-4 py-20">
-  <h2 class="text-3xl font-bold mb-10 text-indigo-400">Gallery</h2>
+  <!-- Order Your Own Design Button - Added at the top -->
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+    <h2 class="text-3xl font-bold text-indigo-400">Gallery</h2>
+    <a id="gallery-order-own-design" href="#" class="inline-flex items-center px-5 py-3 rounded-2xl bg-fuchsia-500/90 text-white font-semibold shadow-soft hover:translate-y-[-2px] hover:bg-fuchsia-500 hover:shadow-xl transition">
+      Order Your Own Design
+    </a>
+  </div>
 
   <!-- Filter Buttons -->
   <div class="relative flex items-center mb-10">
@@ -217,9 +223,8 @@
     </button>
 
     <!-- Scrollable Filter Buttons -->
-<!-- Scrollable Filter Buttons -->
-<div id="filter-container"
-     class="flex overflow-x-auto gap-3 px-8 md:px-10 scrollbar-hide scroll-smooth whitespace-nowrap">
+    <div id="filter-container"
+         class="flex overflow-x-auto gap-3 px-8 md:px-10 scrollbar-hide scroll-smooth whitespace-nowrap">
       <button class="filter-btn px-4 py-2 rounded-xl bg-indigo-500/80 hover:bg-indigo-500 text-white" data-category="all">All</button>
       <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="aesthetic">Aesthetic</button>
       <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="animals">Animals</button>
@@ -231,8 +236,7 @@
       <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="landscapes">Landscapes</button>
       <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="motivation">Motivation</button>
       <button class="filter-btn px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white" data-category="silhouette">Silhouette & Overlay</button>
-      <!-- repeated ones stay as you wanted -->
-</div>
+    </div>
 
     <!-- Right Arrow -->
     <button id="scroll-right"
@@ -247,6 +251,14 @@
 
   <!-- Gallery Items -->
   <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8" id="gallery">
+
+    <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="cars">
+  <img src="gallery/cars/porsche 911.jpeg" alt="porsche" class="w-full object-cover"/>
+      <div class="p-4 flex justify-between items-center">
+        <span class="text-white/80 font-medium">Porsche 911</span>
+        <a href="#" class="text-sm bg-indigo-500/90 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-xl shadow-soft">Order Now</a>
+      </div>
+    </div>
 
     <div class="gallery-item bg-slate-900 rounded-2xl shadow-soft overflow-hidden ring-1 ring-white/10" data-category="silhouette">
       <img src="gallery/silhouette and overlay/jack skellington.jpeg" alt="jack skellington" class="w-full object-cover"/>
@@ -976,12 +988,12 @@ document.getElementById('scroll-right').addEventListener('click', () => {
     window.open(url, '_blank');
   }
 
-  // Nav Order link → own design flow
-  const navOrder = document.getElementById('order-link');
-  if (navOrder) {
-    navOrder.addEventListener('click', (e) => {
-      e.preventDefault();
-      openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.');
+  // Gallery Order Your Own Design button
+  const galleryOrderDesign = document.getElementById('gallery-order-own-design');
+  if (galleryOrderDesign) {
+    galleryOrderDesign.addEventListener('click', (e) => { 
+      e.preventDefault(); 
+      openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.'); 
     });
   }
 
@@ -1008,7 +1020,6 @@ document.getElementById('scroll-right').addEventListener('click', () => {
     const drawer = document.getElementById('mobile-drawer');
     const overlay = document.getElementById('drawer-overlay');
     const drawerClose = drawer ? drawer.querySelector('.drawer-close') : null;
-    const drawerOrder = document.getElementById('drawer-order-own-design');
     if (!navToggle || !drawer || !overlay || !drawerClose) return;
     let isOpen = false;
     function openDrawer(){ if (isOpen) return; isOpen = true; drawer.classList.add('open'); overlay.classList.add('open'); navToggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
@@ -1018,19 +1029,7 @@ document.getElementById('scroll-right').addEventListener('click', () => {
     overlay.addEventListener('click', closeDrawer);
     drawer.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeDrawer(); });
     drawer.querySelectorAll('.drawer-nav a').forEach(link => { link.addEventListener('click', closeDrawer); });
-    if (drawerOrder) {
-      drawerOrder.addEventListener('click', (e)=>{ e.preventDefault(); closeDrawer(); openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.'); });
-    }
   })();
-
-  // Bottom CTA → own design flow
-  const ownDesign = document.getElementById('order-own-design');
-  if (ownDesign) {
-    ownDesign.addEventListener('click', (e) => {
-      e.preventDefault();
-      openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.');
-    });
-  }
 </script>
 
 <!-- Paste this just before </body> -->

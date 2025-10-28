@@ -58,7 +58,7 @@
         <a href="gallery.html" class="hover:text-white">Gallery</a>
         <a href="about.html" class="hover:text-white">About</a>
         <a href="contact.html" class="hover:text-white">Contact</a>
-        <a id="order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+        <!-- ORDER BUTTON REMOVED FROM HEADER -->
       </nav>
       <div id="drawer-overlay" class="xl:hidden"></div>
       <aside id="mobile-drawer" class="xl:hidden" tabindex="-1" aria-label="Mobile menu">
@@ -68,7 +68,7 @@
           <a href="gallery.html">Gallery</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
-          <a id="drawer-order-own-design" href="#" class="inline-flex items-center gap-2 bg-fuchsia-500/90 text-white text-slate-900 font-semibold px-3 py-1.5 rounded-xl hover:bg-fuchsia-500 transition">Order Your Own Design</a>
+          <!-- ORDER BUTTON REMOVED FROM MOBILE DRAWER -->
         </nav>
       </aside>
     </div>
@@ -82,7 +82,7 @@
     <!-- Contact Card -->
     <div class="max-w-3xl w-full bg-slate-900/70 rounded-2xl shadow-soft border border-white/10 p-10">
       <h2 class="text-3xl font-extrabold text-center bg-gradient-to-r from-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">Get in Touch</h2>
-      <p class="text-center text-white/70 mt-2">We’d love to hear from you! Reach out via email, phone, or social media.</p>
+      <p class="text-center text-white/70 mt-2">We'd love to hear from you! Reach out via email, phone, or social media.</p>
 
       <div class="mt-10 grid gap-8 sm:grid-cols-2">
         <!-- Email -->
@@ -132,8 +132,6 @@
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
-    const navOrder = document.getElementById('order-link');
-    if (navOrder) navOrder.addEventListener('click', (e) => { e.preventDefault(); openWhatsAppWithMessage('Hello, I would like to order my own design. Please guide me.'); });
     (function(){
       if (window.__ashzNavInit) return; window.__ashzNavInit = true;
       const navToggle = document.getElementById('nav-toggle');
