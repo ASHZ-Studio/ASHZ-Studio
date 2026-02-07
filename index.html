@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASHZ Studio | Custom Phone Covers</title>
+  <meta name="description" content="Custom phone covers — choose from our gallery or upload your design. Order online easily." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/x-icon" href="tab-icon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            'soft': '0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+          },
+          backgroundImage: {
+            'hero': 'radial-gradient(60% 60% at 70% 10%, rgb(255 255 255 / 0.15) 0%, transparent 60%), linear-gradient(135deg, #0f172a 0%, #111827 35%, #1f2937 100%)'
+          }
+        }
+      }
+    }
+  </script>
+ <style>
+  body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; overflow-x: hidden; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  /* Mobile drawer styles */
+  @media (max-width: 1279px) {  /* Changed from 640px to 1279px (xl breakpoint) */
+    #nav-toggle {
+      background: rgba(99,102,241,0.9); /* indigo */
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 24px rgba(99,102,241,0.25), 0 2px 8px rgba(0,0,0,0.25);
+      backdrop-filter: blur(8px);
+    }
+    #nav-toggle:hover { background: rgba(99,102,241,1); }
+    #mobile-drawer {
+      position: fixed; top: 0; right: 0; width: 80vw; max-width: 320px; height: 100vh;
+      background: rgba(15,23,42,0.92); /* deep indigo/navy */ backdrop-filter: blur(18px);
+      box-shadow: -6px 0 36px 0 rgba(99,102,241,0.25), 0 10px 36px 0 rgba(0,0,0,0.28);
+      border-left: 1px solid rgba(255,255,255,0.06);
+      border-radius: 1.25rem 0 0 1.25rem; z-index: 1001; transform: translateX(100%);
+      transition: transform 0.34s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column; padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+    #mobile-drawer.open { transform: translateX(0); }
+    #drawer-overlay { position: fixed; inset: 0; background: rgba(20,20,20,0.55); z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.25s cubic-bezier(.4,0,.2,1); }
+    #drawer-overlay.open { opacity: 1; pointer-events: auto; }
+    #mobile-drawer .drawer-close { align-self: flex-end; margin-bottom: 1.5rem; background: rgba(99,102,241,0.95); color: #fff; border: none; border-radius: 0.75rem; padding: 0.5rem 0.7rem; font-size: 1.5rem; box-shadow: 0 10px 24px rgba(99,102,241,0.25), 0 2px 8px rgba(0,0,0,0.2); cursor: pointer; transition: background 0.18s; }
+    #mobile-drawer .drawer-close:hover { background: rgba(99,102,241,1); }
+    #mobile-drawer .drawer-nav { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 0.5rem; }
+    #mobile-drawer .drawer-nav a { color: #fff; font-size: 1.05rem; font-weight: 600; padding: 0.85rem 1rem; border-radius: 0.9rem; background: rgba(99,102,241,0.14); box-shadow: 0 6px 18px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.06); transition: background 0.18s, transform 0.18s; }
+    #mobile-drawer .drawer-nav a:hover { background: rgba(99,102,241,0.24); transform: translateY(-1px); }
+  }
+</style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-100 bg-slate-950">
+  <header class="sticky top-0 z-40 backdrop-blur bg-slate-900/60 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="group inline-flex items-center gap-2">
+        <img src="ASHZ logo.png" alt="ASHZ Studio Logo" class="w-8 h-8 rounded-xl shadow-soft"/>
+        <span class="text-sm font-semibold tracking-wide text-white/90 group-hover:text-white">ASHZ Studio</span>
+      </a>
+      <button id="nav-toggle" class="xl:hidden p-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-400" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">
+        <svg id="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <nav class="hidden xl:flex items-center gap-6 text-sm text-white/70">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="gallery.html" class="hover:text-white">Gallery</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+        <!-- ORDER BUTTON REMOVED FROM HEADER -->
+      </nav>
+      <div id="drawer-overlay" class="xl:hidden"></div>
+      <aside id="mobile-drawer" class="xl:hidden" tabindex="-1" aria-label="Mobile menu">
+        <button class="drawer-close" aria-label="Close menu">&times;</button>
+        <nav class="drawer-nav">
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <!-- ORDER BUTTON REMOVED FROM MOBILE DRAWER -->
+        </nav>
+      </aside>
+    </div>
+  </header>
+
+<main class="flex-grow">
+  <section id="hero" class="bg-hero min-h-[79.7vh] flex items-center">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Present the <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-fuchsia-400">real you.</span>
+        </h1>
+        <p class="mt-4 text-white/70 text-lg">
+          Premium custom phone covers printed to perfection. Choose a design you love or send us yours, order in seconds by just pressing order now.
+        </p>
+        <div class="mt-6 flex gap-3 flex-wrap">
+          <a href="gallery.html" class="inline-flex items-center px-5 py-3 rounded-2xl bg-white text-slate-900 font-semibold shadow-soft hover:translate-y-[-4px] hover:shadow-xl transition">Browse Designs</a>
+          <a id="hero-order-own-design" href="#" class="inline-flex items-center px-5 py-3 rounded-2xl bg-fuchsia-500/90 text-white font-semibold shadow-soft hover:translate-y-[-4px] hover:bg-fuchsia-500 hover:shadow-xl transition">Order Your Own Design</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-4 -z-10 bg-gradient-to-tr from-indigo-500/20 via-fuchsia-500/10 to-transparent rounded-3xl blur-2xl"></div>
+        <div class="grid grid-cols-3 gap-3">
+          <img src="mockups/BMW.png" class="w-48 sm:w-56 rounded-3xl shadow-soft ring-1 ring-white/10"/>
+          <img src="mockups/classic.png" class="w-48 sm:w-56 rounded-3xl shadow-soft ring-1 ring-white/10 translate-y-4"/>
+          <img src="mockups/save rick.png" class="w-48 sm:w-56 rounded-3xl shadow-soft ring-1 ring-white/10 -translate-y-2"/>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="py-10 border-t border-white/10 bg-slate-950">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60 text-sm">
+    <p>© <span id="year"></span> ASHZ Studio. All rights reserved.</p>
+    <p class="text-white/70">Designed & developed by ASHZ Studio</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script type="module">
+  // Load WhatsApp number with a tolerant fallback so the site works over file:// or when modules fail
+  function getWhatsAppNumber() {
+    if (window.WHATSAPP_NUMBER) return Promise.resolve(window.WHATSAPP_NUMBER);
+    return import('./config.js').then(m => m.default).catch(() => '923082855273');
+  }
+
+  function openWhatsAppWithMessage(message) {
+    getWhatsAppNumber().then(WHATSAPP_NUMBER => {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      const w = window.open(url, '_blank');
+      if (w) try { w.opener = null; } catch (e) { /* ignore */ }
+    });
+  }
+  
+  // Hero Order Your Own Design button
+  const heroOrderDesign = document.getElementById('hero-order-own-design');
+  if (heroOrderDesign) {
+    heroOrderDesign.addEventListener('click', (e) => { 
+      e.preventDefault(); 
+      openWhatsAppWithMessage('hi, i would like to order my own design, please guide me'); 
+    });
+  }
+
+  // Mobile drawer logic (single instance, robust)
+  (function(){
+    if (window.__ashzNavInit) return; window.__ashzNavInit = true;
+    const navToggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const drawerClose = drawer ? drawer.querySelector('.drawer-close') : null;
+    if (!navToggle || !drawer || !overlay || !drawerClose) return;
+    let isOpen = false;
+    function openDrawer(){ if (isOpen) return; isOpen = true; drawer.classList.add('open'); overlay.classList.add('open'); navToggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer(){ if (!isOpen) return; isOpen = false; drawer.classList.remove('open'); overlay.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+    navToggle.addEventListener('click', openDrawer, { passive: true });
+    drawerClose.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+    drawer.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeDrawer(); });
+    drawer.querySelectorAll('.drawer-nav a').forEach(link => { link.addEventListener('click', closeDrawer); });
+  })();
+</script>
+<script>
+  (function(){
+    try {
+      const navToggle = document.getElementById('nav-toggle');
+      const drawer = document.getElementById('mobile-drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      if (!navToggle || !drawer || !overlay) return;
+      if (navToggle.__ashzBound) return; navToggle.__ashzBound = true;
+      navToggle.addEventListener('click', function () {
+        const open = drawer.classList.toggle('open');
+        overlay.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      overlay.addEventListener('click', function () { drawer.classList.remove('open'); overlay.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; });
+      const closeBtn = drawer.querySelector('.drawer-close'); if (closeBtn) closeBtn.addEventListener('click', function(){ drawer.classList.remove('open'); overlay.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; });
+    } catch (e) { /* graceful fallback */ }
+  })();
+</script>
+</body>
+</html>
